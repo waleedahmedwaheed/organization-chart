@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="a simple map" />
+  <meta charset="utf-8" />
+  
+  <!--
+In most cases, disabling browser zoom this way is a bad user experience.
+However for a full-screen mapping application, pinch zoom has a different meaning.
+Users expect it to zoom the map itself, not the page.
+  -->
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+  
+  <title>a simple graph</title>
+  
+    <link rel="stylesheet" href="jquery.orgchart.css">
+  
+  <script src="jquery.min.js"></script>
+  <script src="jquery.orgchart.js"></script>
+  <script src="jquery.orgchart.min.js"></script>
+ 
+ <style>
+div.orgChart div.adjunct.node {
+    font-size: 0.9em;
+}
+</style>
+  
+  <script>
+$(function() {
+    $("#basic-adjunct-source").orgChart({container: $("#chart")});
+});
+  </script>
+  
+</head>
+  
+<body>
+  
+  <div id="chart">
+</div>
+
+<ul id="basic-adjunct-source" style="display:none;">
+    <li>
+        The<br>
+        Usual<br>
+        Suspects
+        <ul>
+            <li>
+                Keyser Söze <adjunct><i>Kobayashi</i></adjunct>
+                <ul>
+                    <li>Keaton</li>
+                    <li>Hockney</li>
+                    <li>McManus</li>
+                    <li>Fenster</li>
+                    <li>Verbal</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+  
+
+</body>
+</html>
+  
